@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/background_color">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/logo_elegant_app"
+            ></ImageView>
+
+        <TextView
+            android:id="@+id/title_elegant"
+            android:layout_width="wrap_content"
+            android:paddingTop="22dp"
+            android:layout_height="70dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textSize="25sp"
+            android:textColor="@color/color_blue"
+            android:text="@string/elegant"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:paddingTop="22dp"
+            android:text="Movie Rentals"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="@color/color_grey"
+            android:textStyle="bold"
+            android:textSize="25sp"></TextView>
+    </LinearLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="20dp">
+
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:hint="Username"
+                    android:focusedByDefault="true"
+                    android:padding="10dp"
+                    android:elevation="10dp"
+                    android:textColor="@color/color_blue"
+                    android:textStyle="bold"
+                    android:background="@drawable/rounded_edittext"></EditText>
+
+                <EditText
+                    android:id="@+id/nicno"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:hint="NIC No."
+                    android:focusedByDefault="true"
+                    android:padding="10dp"
+                    android:elevation="10dp"
+                    android:textColor="@color/color_blue"
+                    android:textStyle="bold"
+                    android:background="@drawable/rounded_edittext">
+                </EditText>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:maxLines="4"
+                    android:lines="4"
+                    android:padding="10dp"
+                    android:elevation="10dp"
+                    android:textColor="@color/color_blue"
+                    android:textStyle="bold"
+                    android:hint="Address"></EditText>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_edittext"
+                    android:padding="10dp"
+                    android:elevation="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Gender"
+                        android:textSize="18dp">
+                    </TextView>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+                        <RadioButton
+                            android:id="@+id/radioM"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_weight="1"
+                            android:textSize="14dp"
+                            android:text="Male"
+                            android:buttonTint="@color/color_blue"
+                            />
+                        <RadioButton
+                            android:id="@+id/radioF"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:checked="false"
+                            android:layout_weight="1"
+                            android:textSize="14dp"
+                            android:text="Female"
+                            android:buttonTint="@color/color_blue"
+                            />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/dob_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:padding="10dp"
+                    android:elevation="10dp"
+                    android:hint="Select Date of Birth"
+                    android:textSize="18dp"
+                    android:textColor="@color/color_blue"
+                    android:textStyle="bold"></TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_edittext"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:elevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp"
+                            android:gravity="center"
+                            android:text="Age group"
+                            android:textSize="18dp">
+                        </TextView>
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:id="@+id/ageGroup"
+                            android:background="@drawable/rounded_edittext"
+                            android:padding="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:entries="@array/spinner_items">
+                        </Spinner>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp"
+                            android:gravity="center"
+                            android:text="Interests"
+                            android:textSize="18dp">
+                        </TextView>
+
+                        <Button
+                            android:id="@+id/selectInterests"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="10dp"
+                            android:textAllCaps="false"
+                            android:text="Select Interests"
+                            android:textStyle="bold"
+                            android:background="@drawable/rounded_button"
+                            android:textColor="#fff"></Button>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/your_interests"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:gravity="center"
+                            android:text="Your Interests"
+                            android:textSize="18dp"
+                            android:textColor="@color/color_blue"
+                            android:textStyle="bold">
+                        </TextView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rounded_button"
+                    android:text="Submit"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:textAllCaps="false"
+                    android:elevation="10dp"
+                    >
+                </Button>
+
+            </LinearLayout>
+
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>
